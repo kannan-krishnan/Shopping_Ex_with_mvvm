@@ -32,11 +32,11 @@ class ShoppingItemAdapter(
         holder.itemView.delete.setOnClickListener {
             viewModel.delete(shoppingItemDetails)
         }
-        holder.itemView.minis.setOnClickListener {
+        holder.itemView.add.setOnClickListener {
             shoppingItemDetails.amount++
             viewModel.insert(shoppingItemDetails)
         }
-        holder.itemView.add.setOnClickListener {
+        holder.itemView.minis.setOnClickListener {
             if (shoppingItemDetails.amount > 0) {
                 shoppingItemDetails.amount--
                 viewModel.insert(shoppingItemDetails)

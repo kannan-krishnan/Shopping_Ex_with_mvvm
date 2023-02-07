@@ -19,40 +19,45 @@
         android:id="@+id/tv_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginEnd="40dp"
 
         android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nv_name"
         app:layout_constraintEnd_toEndOf="parent"
-       />
+        app:layout_constraintTop_toTopOf="@+id/nv_name"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/delete"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        app:tint="#8C0F0F"
         android:src="@drawable/ic_baseline_delete_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nv_name" />
+        app:layout_constraintBottom_toBottomOf="@+id/nv_name"
+        app:layout_constraintStart_toEndOf="@+id/nv_name"
+        app:layout_constraintTop_toTopOf="@+id/nv_name" />
 
     <ImageView
         android:id="@+id/minis"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
         android:src="@drawable/ic_baseline_remove_circle_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_amount"
+        app:layout_constraintStart_toEndOf="@+id/tv_amount"
+        app:tint="#D6E6E5"
+        app:layout_constraintTop_toTopOf="@+id/tv_amount" />
 
     <ImageView
 
         android:id="@+id/add"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        app:tint="#009688"
         android:src="@drawable/ic_baseline_add_24"
-        app:layout_constraintEnd_toStartOf="@+id/minis"
-        app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_amount"
+        app:layout_constraintEnd_toStartOf="@+id/tv_amount"
+        app:layout_constraintTop_toTopOf="@+id/tv_amount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
